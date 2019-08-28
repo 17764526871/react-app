@@ -1,70 +1,70 @@
 import React, { Component } from 'react';
 import { Menu, Icon, Button } from 'antd';
+import { HashRouter as Router, Link } from "react-router-dom";
+
 const { SubMenu } = Menu;
 
+
 class Conent extends Component {
-    state = {
-        collapsed: false,
-    };
-    toggleCollapsed = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
-    };
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
 
     render() {
+
         return (
-            <div >
-                <Menu
-                    defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
-                    mode="inline"
-                    inlineCollapsed={this.state.collapsed}
-                >
-                    <Menu.Item key="1">
-                        <Icon type="pie-chart" />
-                        <span>Option 1</span>
-                    </Menu.Item>
-                    <Menu.Item key="2">
-                        <Icon type="desktop" />
-                        <span>Option 2</span>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                        <Icon type="inbox" />
-                        <span>Option 3</span>
-                    </Menu.Item>
-                    <SubMenu
-                        key="sub1"
-                        title={
-                            <span>
-                                <Icon type="mail" />
-                                <span>Navigation One</span>
-                            </span>
-                        }
+            <div className="left-bar">
+                <Router >
+                    <Menu
+                        className="menu-style"
+                        defaultSelectedKeys={['home']}
+                        defaultOpenKeys={['sub1']}
+                        mode="inline"
+                        onSelect={(item) => {
+                            console.log(item);
+
+                        }}
                     >
-                        <Menu.Item key="5">Option 5</Menu.Item>
-                        <Menu.Item key="6">Option 6</Menu.Item>
-                        <Menu.Item key="7">Option 7</Menu.Item>
-                        <Menu.Item key="8">Option 8</Menu.Item>
-                    </SubMenu>
-                    <SubMenu
-                        key="sub2"
-                        title={
-                            <span>
-                                <Icon type="appstore" />
-                                <span>Navigation Two</span>
-                            </span>
-                        }
-                    >
-                        <Menu.Item key="9">Option 9</Menu.Item>
-                        <Menu.Item key="10">Option 10</Menu.Item>
-                        <SubMenu key="sub3" title="Submenu">
-                            <Menu.Item key="11">Option 11</Menu.Item>
-                            <Menu.Item key="12">Option 12</Menu.Item>
+                        <Menu.Item key="home">
+                            <Link to="/home">
+                                <Icon type="home" /><span style={{ fontWeight: 'bold' }}>首页</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="home1">
+                            <Link to="/home1">
+                                <Icon type="idcard" /><span style={{ fontWeight: 'bold' }}>用户</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="home2">
+                            <Link to="/home1">
+                                <Icon type="pie-chart" /><span style={{ fontWeight: 'bold' }}>数据</span>
+                            </Link>
+                        </Menu.Item>
+                        <SubMenu
+                            key="sub1"
+                            title={
+                                <span style={{ fontWeight: 'bold' }}>
+                                    <Icon type="appstore" />
+                                    <span>其他</span>
+                                </span>
+                            }
+                        >
+                            <Menu.Item key="todolist">
+                                <Link to="/todolist">
+                                    <span style={{ fontWeight: 'bold' }}>任务列表</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="12">
+                                <Link to="/todolist">
+                                    <span style={{ fontWeight: 'bold' }}>统计</span>
+                                </Link>
+                            </Menu.Item>
                         </SubMenu>
-                    </SubMenu>
-                </Menu>
+                    </Menu>
+                </Router>
             </div>
+
         );
     }
 }

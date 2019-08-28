@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import AppLeftBar from './left-bar/index';
 import AppTopBar from './top-bar/index';
 import AppContent from './content/index';
+import ContentRouter from './router'
 
 const { Header, Sider, Content } = Layout;
 
@@ -21,7 +22,7 @@ class Home extends Component {
                             <AppLeftBar></AppLeftBar>
                         </Sider>
                         <Content>
-                            <AppContent></AppContent>
+                            <ContentRouter></ContentRouter>
                         </Content>
                     </Layout>
                 </Layout>

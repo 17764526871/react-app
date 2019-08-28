@@ -1,3 +1,78 @@
 .home-style {
     height: 100%;
 }
+
+//left-bar
+.left-bar {}
+
+//top-bar
+.app-top-bar {
+    // background: #188fff21;
+
+    .logo {
+        font-size: 40px;
+        font-weight: 700;
+        padding-left: 10px;
+
+        // background: linear-gradient(91deg,#f1eefc,#9dc6ff 70%,#a5bcff);
+        span {
+            display: inline-block;
+            height: 100%;
+            padding: 0 10px;
+            color: rgb(255, 255, 255);
+            background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .user-info {
+        text-align: right;
+        padding-right: 20px;
+        font-size: 14px;
+
+        .share {
+            display: inline-block;
+            height: 100%;
+            padding: 0 12px;
+            cursor: pointer;
+            transition: all .3s;
+
+        }
+
+        .message {
+            box-sizing: border-box;
+            display: inline-block;
+            height: 100%;
+            padding: 0 8px;
+            cursor: pointer;
+            transition: all .3s;
+            
+        }
+
+        .user {
+            display: inline-block;
+            height: 100%;
+            padding: 0 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all .3s;
+
+            .name {
+                color: rgba(0, 0, 0, .65);
+                font-size: 14px;
+                padding-left: 10px;
+            }
+        }
+
+        .langrage {
+            display: inline-block;
+            height: 100%;
+            padding: 0 8px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+    }
+}
+
+//content

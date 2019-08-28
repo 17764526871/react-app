@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Conent extends Component {
+class TodoList extends Component {
 
     render() { 
         return ( 
             <div>
-                这是首页
+                这是todolist
             </div>
          );
     }
 }
  
-export default Conent;
+export default TodoList;
