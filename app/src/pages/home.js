@@ -22,6 +22,8 @@ class Home extends Component {
                             <AppLeftBar></AppLeftBar>
                         </Sider>
                         <Content>
+
+
                             <ContentRouter></ContentRouter>
                         </Content>
                     </Layout>

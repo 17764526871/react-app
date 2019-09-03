@@ -13,6 +13,8 @@ import {ConfigProvider} from 'antd'
 import './assets/style/index.scss';
 import './assets/style/home.scss'
 
+
+
 ReactDOM.render(
     <Provider store={store}>
         <ConfigProvider locale={zhCN}>

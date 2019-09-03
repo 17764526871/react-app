@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import App from './app'
 
 class TodoList extends Component {
 
     render() { 
         return ( 
-            <div>
-                这是todolist
+            <div className="todolist-index">
+               <App></App>
             </div>
          );
     }

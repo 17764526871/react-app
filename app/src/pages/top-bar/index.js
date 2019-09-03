@@ -27,7 +27,7 @@ class Conent extends Component {
                                 </span>
                             </Badge>
                             <span className="user">
-                                <Avatar style={{ backgroundColor: '#87d068' }} icon="user" />
+                                <Avatar size="small" style={{ backgroundColor: '#87d068' }} icon="user" />
                                 <span className="name">
                                     jack
                                 </span>

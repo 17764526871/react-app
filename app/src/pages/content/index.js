@@ -4,7 +4,7 @@ class Conent extends Component {
 
     render() { 
         return ( 
-            <div>
+            <div className="">
                 这是首页
             </div>
          );
