@@ -36,6 +36,7 @@ const Footer = (props) => {
                 </Badge>
             </ButtonGroup>
         </div>
+        
     )
 }
 //set state

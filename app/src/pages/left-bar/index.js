@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Icon, Button } from 'antd';
-import { HashRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const { SubMenu } = Menu;
 
@@ -12,14 +12,14 @@ class Conent extends Component {
     }
 
     render() {
-
+        console.log(window.location.hash.slice(2))
         return (
             <div className="left-bar">
-                <Router >
+
                     <Menu
                         className="menu-style"
-                        defaultSelectedKeys={['home']}
-                        defaultOpenKeys={['sub1']}
+                        defaultSelectedKeys={[window.location.hash.slice(2)]}
+                        defaultOpenKeys={[]}
                         mode="inline"
                         onSelect={(item) => {
                             console.log(item);
@@ -62,7 +62,6 @@ class Conent extends Component {
                             </Menu.Item>
                         </SubMenu>
                     </Menu>
-                </Router>
             </div>
 
         );
